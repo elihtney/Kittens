@@ -12,11 +12,10 @@ public class Kitten extends Cat{
     public Kitten(FurColor furColor, FurLength furLength, EyeColor eyeColor){
         super(furColor, furLength, eyeColor);
     }
-//
-//    public void setKittenFurColor(String fur){
-//        super.
-//        kittenFurColor = fur;
-//    }
+
+    public void setKittenFurColor(String fur){
+        kittenFurColor = fur;
+    }
 
     public void setKittenEyeColor(String eyes){
         kittenEyeColor = eyes;
