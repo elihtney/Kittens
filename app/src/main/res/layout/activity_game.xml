@@ -21,4 +21,55 @@
         android:layout_marginTop="58dp"
         android:textSize="85dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 1"
+        android:id="@+id/cat1"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="97dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 2"
+        android:id="@+id/cat2"
+        android:layout_alignTop="@+id/cat1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="102dp"
+        android:layout_marginEnd="102dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 3"
+        android:id="@+id/cat3"
+        android:layout_below="@+id/cat1"
+        android:layout_alignLeft="@+id/cat1"
+        android:layout_alignStart="@+id/cat1"
+        android:layout_marginTop="159dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 4"
+        android:id="@+id/cat4"
+        android:layout_alignTop="@+id/cat3"
+        android:layout_alignLeft="@+id/cat2"
+        android:layout_alignStart="@+id/cat2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mix It Up"
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="116dp" />
+
 </RelativeLayout>
