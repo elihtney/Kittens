@@ -34,6 +34,9 @@ public class Cat {
         this.furLength = furLength;
         this.eyeColor = eyeColor;
     }
+    public Cat(){
+
+    }
 
     public FurColor getFurColor() {
         return furColor;
