@@ -1,19 +1,30 @@
 package com.example.brandon.kittenfactory;
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.widget.Toast;
 
 
 import android.support.v4.app.Fragment;
+
+import com.example.brandon.kittenfactory.Models.Cat;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Brandon on 4/1/2016.
  */
 public class GameActivity extends SingleFragmentActivity implements PickFragment.PickCallback{
+    ArrayList<Cat> catList;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        catList = new ArrayList();
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     protected Fragment createFragment() {
-        return new PickFragment();
+        return new PickFragment(catList);
     }
 
     @Override
@@ -24,4 +35,5 @@ public class GameActivity extends SingleFragmentActivity implements PickFragment
                 .replace(R.id.fragment_container, fragment)
                 .commit();
     }
+
 }

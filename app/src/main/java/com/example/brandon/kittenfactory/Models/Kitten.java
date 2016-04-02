@@ -6,20 +6,20 @@ package com.example.brandon.kittenfactory.Models;
 public class Kitten extends Cat{
 
     private String kittenFurColor;
-    private String kittenEyeColor;
+    //private String kittenEyeColor;
     private String kittenFurLength;
 
-    public Kitten(FurColor furColor, FurLength furLength, EyeColor eyeColor){
-        super(furColor, furLength, eyeColor);
+    public Kitten(FurColor furColor, FurLength furLength){
+        super(furColor, furLength);
     }
 
     public void setKittenFurColor(String fur){
         kittenFurColor = fur;
     }
 
-    public void setKittenEyeColor(String eyes){
-        kittenEyeColor = eyes;
-    }
+//    public void setKittenEyeColor(String eyes){
+//        kittenEyeColor = eyes;
+//    }
 
     public void setKittenFurLength(String length){
         kittenFurLength = length;

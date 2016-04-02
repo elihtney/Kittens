@@ -21,18 +21,18 @@ public class Cat {
         LONG, SHORT
     }
 
-    public enum EyeColor {
-        MIX, BLUE, GREEN, ORANGE
-    }
+//    public enum EyeColor {
+//        MIX, BLUE, GREEN, ORANGE
+//    }
 
     private FurColor furColor;
     private FurLength furLength;
-    private EyeColor eyeColor;
+    //private EyeColor eyeColor;
 
-    public Cat(FurColor furColor, FurLength furLength, EyeColor eyeColor) {
+    public Cat(FurColor furColor, FurLength furLength) {
         this.furColor = furColor;
         this.furLength = furLength;
-        this.eyeColor = eyeColor;
+        //this.eyeColor = eyeColor;
     }
     public Cat(){
 

@@ -11,6 +11,8 @@ import android.widget.Button;
 
 import com.example.brandon.kittenfactory.Models.Cat;
 
+import java.util.ArrayList;
+
 /**
  * Created by Brandon on 4/2/2016.
  */
@@ -22,6 +24,7 @@ public class PickFragment extends Fragment {
     private Button catFour;
     private Button nextPage;
     PickCallback callback = null;
+    private ArrayList<Cat> catList;
 
     @Override
     public void onAttach(Activity activity) {
@@ -29,12 +32,16 @@ public class PickFragment extends Fragment {
         callback = (PickCallback)activity;
     }
 
+    public PickFragment(ArrayList arrayList){
+        catList = arrayList;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_game, container, false);
 
-        Cat[] cats = new Cat[4];
+        final Cat[] cats = new Cat[4];
 
         for(int i=0; i<4;i++){
             cats[i] = new Cat();
@@ -48,12 +55,30 @@ public class PickFragment extends Fragment {
         catOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                catList.add(cats[0]);
             }
         });
         catTwo = (Button)v.findViewById(R.id.cat2);
+        catTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                catList.add(cats[1]);
+            }
+        });
         catThree = (Button)v.findViewById(R.id.cat3);
+        catThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                catList.add(cats[2]);
+            }
+        });
         catFour = (Button)v.findViewById(R.id.cat4);
+        catFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                catList.add(cats[3]);
+            }
+        });
         nextPage = (Button)v.findViewById(R.id.next);
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +92,10 @@ public class PickFragment extends Fragment {
 
     public interface PickCallback{
         void viewSquares();
+    }
+
+    public void addCats(){
+
     }
 
 }
