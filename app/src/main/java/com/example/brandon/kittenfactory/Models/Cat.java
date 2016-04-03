@@ -1,7 +1,5 @@
 package com.example.brandon.kittenfactory.Models;
 
-import java.util.ArrayList;
-
 /**
  * Created by Brandon on 4/2/2016.
  */
@@ -21,18 +19,12 @@ public class Cat {
         LONG, SHORT
     }
 
-//    public enum EyeColor {
-//        MIX, BLUE, GREEN, ORANGE
-//    }
-
     private FurColor furColor;
     private FurLength furLength;
-    //private EyeColor eyeColor;
 
     public Cat(FurColor furColor, FurLength furLength) {
         this.furColor = furColor;
         this.furLength = furLength;
-        //this.eyeColor = eyeColor;
     }
     public Cat(){
 
@@ -44,5 +36,13 @@ public class Cat {
 
     public void setFurColor(FurColor furColor) {
         this.furColor = furColor;
+    }
+
+    public FurLength getFurLength() {
+        return furLength;
+    }
+
+    public void setFurLength(FurLength furLength) {
+        this.furLength = furLength;
     }
 }
