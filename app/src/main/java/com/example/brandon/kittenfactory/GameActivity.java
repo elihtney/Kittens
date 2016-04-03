@@ -9,10 +9,13 @@ import com.example.brandon.kittenfactory.Models.Cat;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by Brandon on 4/1/2016.
  */
+
 public class GameActivity extends SingleFragmentActivity implements PickFragment.PickCallback{
+
     ArrayList<Cat> catList;
 
     @Override
@@ -25,6 +28,7 @@ public class GameActivity extends SingleFragmentActivity implements PickFragment
     protected Fragment createFragment() {
         return new PickFragment(catList);
     }
+
 
     @Override
     public void viewSquares() {

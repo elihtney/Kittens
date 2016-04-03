@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class HomeActivity extends Activity {
     MediaPlayer homeSound;
+    MediaPlayer buttonClick;
 
     private Button startGame;
     private Button viewInstructions;
@@ -18,6 +19,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         homeSound = MediaPlayer.create(this, R.raw.home_music);
+        buttonClick = MediaPlayer.create(this, R.raw.button_click);
         homeSound.start();
         startGame = (Button)findViewById(R.id.start_btn);
         startGame.setOnClickListener(new View.OnClickListener() {
@@ -35,13 +37,13 @@ public class HomeActivity extends Activity {
         });
     }
     private void startGame(){
-        homeSound.stop();
+        buttonClick.start();
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 
     public void viewInstructions() {
-        homeSound.stop();
+        buttonClick.start();
         Intent intent = new Intent(this, InstructionActivity.class);
         startActivity(intent);
     }
