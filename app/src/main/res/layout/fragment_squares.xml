@@ -23,7 +23,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="366dp"
         android:layout_marginStart="366dp"
-        android:layout_marginTop="711dp" />
+        android:layout_marginTop="1100dp" />
 
     <ImageView
         android:layout_width="200dp"
